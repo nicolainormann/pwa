@@ -1,0 +1,30 @@
+$device-bps: ('mobile': (max-width: 567px),
+'tablet': '(min-width: 568px) and (max-width: 1024px)',
+'desktop': (min-width: 1025px));
+
+@mixin respond-to($devices...) {
+    @each $device in $devices {
+        @media #{map-get($device-bps, $device)} {
+            @content;
+        }
+    }
+}
+
+@mixin container() {
+    --padding: #{$spacing};
+
+    @include respond-to(tablet) {
+        --padding: #{$spacing-medium};
+    }
+
+    @include respond-to(desktop) {
+        --padding: #{$spacing-large};
+        max-width: 1600px;
+    }
+
+    width: 100%;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    margin-left: auto;
+    margin-right: auto;
+}

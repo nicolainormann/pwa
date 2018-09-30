@@ -1,0 +1,26 @@
+.list {
+    &__items {
+        --fractions: 1fr;
+
+        @include respond-to(tablet) {
+            --fractions: 1fr 1fr;
+        }
+
+        @include respond-to(desktop) {
+            --fractions: 1fr 1fr 1fr 1fr;
+        }
+
+        display: grid;
+        grid-template-columns: var(--fractions);
+        grid-gap: $spacing-large;
+        margin-bottom: $spacing-large;
+    }
+
+    &__load-more {
+        text-align: center;
+    }
+
+    &__progress-text {
+        margin-bottom: $spacing;
+    }
+}

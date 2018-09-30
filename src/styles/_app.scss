@@ -1,0 +1,7 @@
+.app {
+    &__container {
+        @include container;
+        margin-top: $spacing-large;
+        margin-bottom: $spacing-large;
+    }
+}

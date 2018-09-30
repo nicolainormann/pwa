@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="assets/manifest.json">
+</head>
+
+<body class="app">
+    <div class="app__container">
+        <app-list></app-list>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        } 
+    </script>
+</body>
+
+</html>

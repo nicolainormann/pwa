@@ -1,0 +1,16 @@
+.list-item {
+    &__image {
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+    }
+
+    &__title {
+        margin: $spacing 0;
+    }
+
+    &__author {
+        margin-bottom: $spacing;
+        color: $grey-dark;
+    }
+}
