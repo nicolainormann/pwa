@@ -592,11 +592,11 @@
     to-fast-properties "^2.0.0"
 
 "@polymer/lit-element@^0.6.0":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.1.tgz#56772f8fb0c6d3d73a20a6d17f3bc82ec648664b"
-  integrity sha512-eselNs2lA4n1R1rSyPXW8XR3ISmbYVQcDtIMSINHVNZ56pCtCHOtgmaG8C4k0gONwikEMJTP9blNHD/gdYIxFA==
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.2.tgz#589f2fa19e84d23c1debb2c329cbab758ae30581"
+  integrity sha512-4NWvK6SyAyyeW1mQ24ZVR+rtqZNHZ2JWnVTsPF/1iXnmmPwnpLs8mz0HRqz5adyoyt96ed/y2dsDwGBktJYyew==
   dependencies:
-    lit-html "^0.11.4"
+    lit-html "^0.12.0"
 
 "@webassemblyjs/ast@1.7.8":
   version "1.7.8"
@@ -3439,10 +3439,10 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
-lit-html@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.11.4.tgz#fa397d2b2f2d0523ebc136e5a1699aa4e9346152"
-  integrity sha512-yfJUxQrRjhYo4cdz3Db9YlkHs9v+rTZA4fvE/dqCOrA1Q2Bmx52X2OtEgGQ+JhyCb6ddDTndLijZjsSoQ44G7Q==
+lit-html@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.12.0.tgz#d994420fda74744f9d4a79401b086de929643e6a"
+  integrity sha512-NyFgq8yTlGEjUFQOmNnK/kj+ZdDVJzTwsLunNSewGiOns7SjuJi6ymCCqzZZ81uW2VwEmliMbOlFZc9QmOJPLA==
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -5726,10 +5726,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.0.x:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
-  integrity sha512-kk80vLW9iGtjMnIv11qyxLqZm20UklzuR2tL0QAnDIygIUIemcZMxlMWudl9OOt76H3ntVzcTiddQ1/pAAJMYg==
+typescript@^3.0.3:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.1.tgz#3362ba9dd1e482ebb2355b02dfe8bcd19a2c7c96"
+  integrity sha512-Veu0w4dTc/9wlWNf2jeRInNodKlcdLgemvPsrNpfu5Pq39sgfFjvIIgTsvUHCoLBnMhPoUA+tFxsXjU6VexVRQ==
 
 uglify-es@^3.3.4:
   version "3.3.9"
