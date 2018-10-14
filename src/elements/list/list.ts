@@ -39,24 +39,25 @@ class ListElement extends LitElement {
     }
 
     render() {
+        const { totalResults, articles, loadMore } = this;
         return html`
             ${css}
             <div class="list">
                 <h1>${Translations.list.news}</h1>
             
                 <div class="list__items">
-                    ${this.articles.map(item => html`
+                    ${articles.map(item => html`
                         <app-list-item .item=${item}></app-list-item>
                     `)}
                 </div>
             
-                ${this.articles.length !== this.totalResults ? html`
+                ${articles.length !== totalResults ? html`
                     <div class="list__load-more">
                         <div class="list__progress-text">
-                            ${Translations.list.showing} ${this.articles.length} ${Translations.list.of} ${this.totalResults}
+                            ${Translations.list.showing} ${articles.length} ${Translations.list.of} ${totalResults}
                         </div>
                 
-                        <button class="btn" @click=${this.loadMore}>
+                        <button class="btn" @click=${loadMore}>
                             ${Translations.list.loadMore}
                         </button>
                     </div>

@@ -23,23 +23,24 @@ class ListItemElement extends LitElement {
     }
 
     render() {
+        const { item } = this;
         return html`
             ${css}
             <div class="list-item">
-                <div class="list-item__image" style="background-image: url(${this.item.urlToImage})"></div>
+                <div class="list-item__image" style="background-image: url(${item.urlToImage})"></div>
             
                 <h2 class="list-item__title">
-                    ${this.item.title}
+                    ${item.title}
                 </h2>
 
-                ${this.item.author && html`
+                ${item.author && html`
                     <div class="list-item__author">
-                        ${Translations.list.author}: ${this.item.author}
+                        ${Translations.list.author}: ${item.author}
                     </div>
                 `}
             
                 <div class="list-item__description">
-                    ${this.item.description}
+                    ${item.description}
                 </div>
             </div>
         `;
