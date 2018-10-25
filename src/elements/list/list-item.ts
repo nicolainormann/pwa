@@ -33,11 +33,11 @@ class ListItemElement extends LitElement {
                     ${item.title}
                 </h2>
 
-                ${item.author && html`
+                ${item.author ? html`
                     <div class="list-item__author">
                         ${Translations.list.author}: ${item.author}
                     </div>
-                `}
+                ` : ""}
             
                 <div class="list-item__description">
                     ${item.description}

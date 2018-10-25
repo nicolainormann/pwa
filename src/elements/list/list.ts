@@ -1,7 +1,8 @@
 import { LitElement, html, property } from "@polymer/lit-element";
-import { Api } from "../../api/api";
+import { api } from "../../api/api";
 import { css } from "../../utils/css";
 import { Translations } from "../../utils/translations";
+import { repeat } from "lit-html/directives/repeat";
 
 import "./list-item";
 
@@ -17,7 +18,7 @@ class ListElement extends LitElement {
     constructor() {
         super();
 
-        Api.getNews()
+        api.getNews()
             .then(res => {
                 this.totalResults = res.totalResults;
                 this.articles = res.articles;
@@ -29,7 +30,7 @@ class ListElement extends LitElement {
         if(!this.fetching) {
             this.fetching = true;
     
-            Api.getNews(this.articles.length / 20 + 1)
+            api.getNews(this.articles.length / 20 + 1)
                 .then(res => {
                     this.totalResults = res.totalResults;
                     this.articles = this.articles.concat(res.articles);
@@ -46,7 +47,7 @@ class ListElement extends LitElement {
                 <h1>${Translations.list.news}</h1>
             
                 <div class="list__items">
-                    ${articles.map(item => html`
+                    ${repeat(articles, item => item.source.id, item => html`
                         <app-list-item .item=${item}></app-list-item>
                     `)}
                 </div>
@@ -61,7 +62,7 @@ class ListElement extends LitElement {
                             ${Translations.list.loadMore}
                         </button>
                     </div>
-                ` : null}
+                ` : ""}
             </div>
         `;
     }
